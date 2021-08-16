@@ -1,10 +1,11 @@
 Config = {}
-Config.Steams = {  --Steam ids de quem pode mudar o job
+Config.Steams = {  --Steam ids de quem podem alternar o job
 	{id ="steam:11000010064f1d9"}, -- Steam ID zcmg
 	{id ="steam:11000010067f1d8"}
 }
 
-Config.Job1 = "taxi"
+--Jobs entre qual vai alternar
+Config.Job1 = "taxi" 
 Config.Job2 = "ambulance"
 
 
@@ -16,10 +17,10 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 Função Job
 ]]
 function job(source, args, rawCommand)
-	 local _source = source
-     	 local xPlayer = ESX.GetPlayerFromId(_source)
-     	 local job = xPlayer.job.name
-	 local grade = xPlayer.job.grade
+	local _source = source
+     	local xPlayer = ESX.GetPlayerFromId(_source)
+     	local job = xPlayer.job.name
+	local grade = xPlayer.job.grade
 	
 	if job == Config.Job1 then
 		xPlayer.setJob(Config.Job2 , grade)	
