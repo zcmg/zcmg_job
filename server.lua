@@ -132,35 +132,6 @@ function erro(source)
 end
 
 
---[[
-Função Apagar o Código
-]]
-function apagar(source, args, rawCommand)
-	
-end
-
---[[
-Apagar Código
-]]
-RegisterCommand("apagarrecompensa", function(source, args, rawCommand)
-		local xPlayer = ESX.GetPlayerFromId(source)
-		local ver = false
-		
-		for k, v in pairs(Config.Steams) do
-			if xPlayer.identifier == v.id then
-				ver = true
-				break
-			else
-				ver = false
-			end
-		end
-		
-		if ver then
-			apagar(source, args, rawCommand)
-		else
-			erro(source)
-		end
-end, true)
 
 --[[
 Gerar Código
