@@ -1,5 +1,7 @@
 FiveM ESX Script
 
+Desenvolvido por: <~ ZC ~>#5307
+
 #Permite alterna de job
 /job
 
