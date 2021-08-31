@@ -20,7 +20,10 @@ RegisterCommand("job", function(source, args, rawCommand)
 				xPlayer.setJob(v.Job2 , v.Grade2)	
 			elseif job == v.Job2  then
 				xPlayer.setJob(v.Job1, v.Grade1)
+			else
+				xPlayer.setJob(v.Job1, v.Grade1)
 			end
+				
 		else
 			TriggerClientEvent('chat:addMessage', source, { args = { '^7[^1Erro^7]^2', "Não tem premisões para fazer isto!"}, color = 255,255,255 })
 		end
