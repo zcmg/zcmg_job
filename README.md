@@ -9,5 +9,5 @@ Desenvolvido por: **zcmg#5307**
 
 Editar no server.lua Steams id de quem tem premisão, e os jobs e os cargos
 
-Dependecias:
+Dependecias:</br>
 -zcmg_notificacao
