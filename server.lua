@@ -18,14 +18,17 @@ RegisterCommand("job", function(source, args, rawCommand)
 		if xPlayer.identifier == v.steamid then
 			if job == v.Job1 then
 				xPlayer.setJob(v.Job2 , v.Grade2)	
+				TriggerClientEvent('zcmg_notificacao:Alerta', source, "CENTRO DE EMPREGO", "Mudas-te de emprego para: <b>"..xPlayer.job.label.."</b>", 5000, 'sucesso')
 			elseif job == v.Job2  then
 				xPlayer.setJob(v.Job1, v.Grade1)
+				TriggerClientEvent('zcmg_notificacao:Alerta', source, "CENTRO DE EMPREGO", "Mudas-te de emprego para: <b>"..xPlayer.job.label.."</b>", 5000, 'sucesso')
 			else
 				xPlayer.setJob(v.Job1, v.Grade1)
+				TriggerClientEvent('zcmg_notificacao:Alerta', source, "CENTRO DE EMPREGO", "Mudas-te de emprego para: <b>"..xPlayer.job.label.."</b>", 5000, 'sucesso')
 			end
 				
 		else
-			TriggerClientEvent('chat:addMessage', source, { args = { '^7[^1Erro^7]^2', "Não tem premisões para fazer isto!"}, color = 255,255,255 })
+			TriggerClientEvent('zcmg_notificacao:Alerta', source, "CENTRO DE EMPREGO", "Não tem premisões para fazer isto!", 5000, 'erro')
 		end
 	end
 end, true)
