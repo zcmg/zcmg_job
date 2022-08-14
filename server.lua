@@ -1,15 +1,9 @@
-Config = {}
-
-Config.Jobs = {
-	{steamid ="steam:11000010064f1d9", Job1 = "police", Job2 = "ambulance", Grade1 = 1, Grade2=3},
-}
-
-
 ESX = nil 
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+TriggerEvent(Config.ESXTrigger, function(obj) ESX = obj end)
 
 
-RegisterCommand("job", function(source, args, rawCommand)
+RegisterServerEvent('zcmg_job:mudarjob')
+AddEventHandler('zcmg_job:mudarjob', function()
 	local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
     local job = xPlayer.job.name
@@ -31,5 +25,5 @@ RegisterCommand("job", function(source, args, rawCommand)
 			TriggerClientEvent('zcmg_notificacao:Alerta', source, "CENTRO DE EMPREGO", "Não tem premisões para fazer isto!", 5000, 'erro')
 		end
 	end
-end, true)
+end)
 
