@@ -1,6 +1,6 @@
 Config = {}
 
-Config.BlipState = false -- Activar o blip para trocar de job
+Config.BlipState = true -- Activar o blip para trocar de job
 
 Config.Command = "mudarjob" -- Caso o blip esta dessactivo(false)
 
