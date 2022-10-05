@@ -2,9 +2,10 @@
 
 Script que permite a um player específico atravez de um comando/blip mudar entre dois empregos pré-definidos.
 
-Desenvolvido por: **zcmg#5307**
+Admins:
+Comando setjob2 para defenir o segundo emprego
 
-PS: Editar no config.lua Steams id de quem tem premisão, e os jobs e os cargos
+Desenvolvido por: **zcmg#5307**
 
 Dependecias:</br>
 -zcmg_notificacao

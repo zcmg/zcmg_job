@@ -2,15 +2,18 @@ fx_version 'cerulean'
 games { 'gta5' }
 
 author 'zcmg#5307'
-description 'v1.2'
+description 'v1.3'
+
+shared_scripts {
+	'config.lua',
+	'@es_extended/imports.lua'
+}
 
 client_scripts {
-	'config.lua',
-	'client.lua'
+	'client/*.lua'
 }
 
 server_scripts {
-	'@mysql-async/lib/MySQL.lua',
-	'config.lua',
-	'server.lua'
+	'@oxmysql/lib/MySQL.lua',
+	'server/*.lua'
 }
