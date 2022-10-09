@@ -2,7 +2,7 @@ fx_version 'cerulean'
 games { 'gta5' }
 
 author 'zcmg#5307'
-description 'v1.3'
+description 'v1.4'
 
 shared_scripts {
 	'config.lua',
